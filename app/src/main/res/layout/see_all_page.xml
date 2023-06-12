@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white">
+            <ImageView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="@drawable/search_shape"
+                android:src="@drawable/baseline_sort_24"
+                android:elevation="8dp"
+                android:padding="10dp"
+                android:id="@+id/sortExplore"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Explore"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="32sp"/>
+            <ImageView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="@drawable/search_shape"
+                android:src="@drawable/baseline_search_24"
+                android:elevation="12dp"
+                android:scaleType="fitXY"
+                android:padding="8dp"
+                android:id="@+id/searchIc"
+                android:layout_marginEnd="12dp"
+                android:layout_gravity="end"/>
+
+
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="12dp"
+
+            android:id="@+id/rvExploreSort"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rvExploreShoesList"
+            android:layout_marginTop="4dp"
+            android:clipToPadding="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            />
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

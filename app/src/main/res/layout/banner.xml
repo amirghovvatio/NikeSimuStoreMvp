@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="26dp"
+    android:backgroundTint="@color/phosphorus"
+    android:layout_marginEnd="12dp"
+    android:layout_marginStart="12dp"
+    android:layout_marginTop="35dp"
+    >
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:text="NIKE"
+            android:textColor="#330D0D0D"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:textSize="88sp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="12dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nike Lebron\nWitness"
+            android:textColor="@color/white"
+            android:textSize="42sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/product_sans_bold"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"/>
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="Shop Now"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="12dp"
+            android:layout_marginStart="12dp"
+            android:textSize="16sp"
+            android:letterSpacing="0.01"
+            android:textStyle="bold"
+            android:id="@+id/shopNowBtn"
+            android:textAllCaps="false"
+            android:fontFamily="@font/product_sans_bold"
+            android:elevation="16dp"
+            app:cornerRadius="12dp"/>
+        <ImageView
+            android:layout_width="220dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/starter_shoe"
+            android:layout_gravity="end"
+            android:rotation="-15"/>
+    </FrameLayout>
+
+</com.google.android.material.card.MaterialCardView>

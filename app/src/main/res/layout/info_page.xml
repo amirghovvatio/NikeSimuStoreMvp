@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/backIcInfo"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="@drawable/search_shape"
+                android:elevation="8dp"
+                android:padding="10dp"
+                android:src="@drawable/baseline_keyboard_backspace_24" />
+
+            <TextView
+                android:id="@+id/tvMainInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Men Shoes"
+                android:textColor="@color/black"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/cartInfoPage"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/search_shape"
+                android:elevation="12dp"
+                android:padding="8dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/baseline_shopping_cart_24" />
+
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:id="@+id/imgInfo"
+                android:layout_width="350dp"
+                android:layout_height="171dp"
+                android:layout_gravity="center"
+                android:src="@drawable/starter_shoe" />
+
+        </FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="MENS SHOES"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Summer Collections\nNIKE 2022"
+            android:textSize="32sp"
+            android:id="@+id/tvNameInfo"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            >
+            <RatingBar
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:rating="4.8"
+                android:id="@+id/infoRatingBar"
+                style="@style/Widget.AppCompat.RatingBar.Small"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.9"
+                android:textColor="@color/black"
+                android:layout_toEndOf="@id/infoRatingBar"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:id="@+id/infoRatingBarTxt"
+                android:layout_marginBottom="10dp"
+                android:textSize="12sp"
+                android:layout_marginStart="4dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(Reviews)"
+                android:layout_toEndOf="@id/infoRatingBarTxt"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:textSize="12sp"
+                android:layout_marginStart="2dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$80.99"
+                android:id="@+id/tvPriceInfo"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:textSize="24sp"
+                android:gravity="center_vertical"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="8dp"/>
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:letterSpacing="0.01"
+            android:text="Select Your Color"
+            android:id="@+id/tvColorSelect"
+            android:layout_above="@id/colorContainer"
+            android:textColor="#1B1A1A"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:id="@+id/colorCancel"
+            android:textSize="16sp"
+            android:textColor="#F60000"
+            android:layout_above="@+id/colorContainer"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="12dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:id="@+id/colorContainer"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:layout_above="@id/giveSizeTxt"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:backgroundTint="#FF3014"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="28dp"
+                android:id="@+id/colorRed"
+                app:cardCornerRadius="6dp"
+                android:elevation="4dp"
+                />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:backgroundTint="#FFEA00"
+                android:id="@+id/colorYellow"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="28dp"
+                app:cardCornerRadius="6dp"
+                android:elevation="4dp"
+                />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:backgroundTint="#050505"
+                android:id="@+id/colorBlack"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="28dp"
+                app:cardCornerRadius="6dp"
+                android:elevation="4dp"
+                />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:backgroundTint="#0029F5"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="28dp"
+                android:id="@+id/colorBlue"
+                app:cardCornerRadius="6dp"
+                android:elevation="4dp"
+                />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/phosphorus"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"
+                android:id="@+id/colorGreen"
+                app:cardCornerRadius="6dp"
+                android:elevation="4dp"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/sizeContainer"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"
+            android:letterSpacing="0.01"
+            android:layout_marginStart="12dp"
+            android:id="@+id/giveSizeTxt"
+            android:text="Select Your Size"
+            android:textColor="#1B1A1A"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:id="@+id/tvCancelSize"
+            android:textSize="16sp"
+            android:textColor="#F60000"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="12dp"
+            android:layout_above="@id/sizeContainer"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:id="@+id/sizeContainer"
+            android:layout_above="@+id/infoAddToCartBtn"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="62dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="38"
+                    android:id="@+id/sizeOne"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="39"
+                    android:id="@+id/sizeTwo"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="40"
+                    android:id="@+id/sizeThree"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="41"
+                    android:id="@+id/sizeFour"
+
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="42"
+                    android:id="@+id/sizeFive"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="0dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="43"
+                    android:id="@+id/tvSix"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_gravity="bottom"
+            android:text="Add To cart"
+            android:id="@+id/infoAddToCartBtn"
+            android:backgroundTint="#f94b18"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"/>
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

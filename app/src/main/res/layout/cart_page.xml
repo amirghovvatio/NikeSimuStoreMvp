@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="@drawable/search_shape"
+                android:src="@drawable/baseline_keyboard_backspace_24"
+                android:elevation="8dp"
+                android:padding="10dp"
+                android:id="@+id/backIcCart"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Cart"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="28sp"/>
+            <ImageView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="@drawable/search_shape"
+                android:src="@drawable/baseline_favorite_border_24"
+                android:elevation="12dp"
+                android:scaleType="fitXY"
+                android:padding="8dp"
+                android:id="@+id/favBtnCart"
+                android:layout_marginEnd="12dp"
+                android:layout_gravity="end"/>
+
+
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:id="@+id/rvCartShoesList"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"/>
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_gravity="bottom"
+        android:id="@+id/cartPagePayBtn"
+        android:backgroundTint="#f94b18"
+        android:text="Check out"
+        app:cornerRadius="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="8dp"/>
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
